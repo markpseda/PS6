@@ -3,7 +3,7 @@
                                    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Nov 13, 2014 2:49:57 PM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
- <class name="domain.StudentDomainModel" table="stu">
+ <class name="domain.PersonDomainModel" table="per">
   <id name="PersonID" type="uuid-char">
    <column length="40" name="PersonID"/>
   </id>
@@ -19,10 +19,10 @@
   <property generated="never" lazy="false" name="birthday" type="date">
    <column length="7" name="birthday" not-null="false"/>
   </property>
-  <property name="postalCode" type="integer">
+  <property generated="never" lazy="false" name="postalCode" type="integer">
    <column name="postalCode" not-null="true"/>
   </property>
-  <property name="city">
+  <property generated="never" lazy="false" name="city">
    <column length="20" name="city" not-null="true"/>
   </property>
  </class>

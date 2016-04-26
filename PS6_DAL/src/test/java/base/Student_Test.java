@@ -17,7 +17,7 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.StringProperty;
 
 public class Student_Test {
-
+	PersonDomainModel testPerson = new PersonDomainModel();
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -36,7 +36,6 @@ public class Student_Test {
 
 	@Test
 	public void Addtest() {
-		PersonDomainModel testPerson = new PersonDomainModel();
 		testPerson.setFirstName("Mark");
 		testPerson.setLastName("Seda");
 		testPerson.setCity("Dover");
@@ -47,7 +46,7 @@ public class Student_Test {
 	}
 	@Test
 	public void Deletetest() {
-		assertTrue(1==1);
+		PersonDAL.deletePerson(testPerson.getPersonID());
 	}
 	@Test
 	public void Updatetest() {
