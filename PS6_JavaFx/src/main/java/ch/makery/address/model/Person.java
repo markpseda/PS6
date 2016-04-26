@@ -23,7 +23,7 @@ public class Person extends PersonDomainModel {
     }
 
     public Person(String firstName, String lastName, String street, int postalCode, String city, Object birthday ) {
-    	//this.setPersonID(PersonID);
+    	this.setPersonID();
         this.setFirstName(firstName);
         this.setLastName(lastName);
 
@@ -32,7 +32,6 @@ public class Person extends PersonDomainModel {
         this.setPostalCode(postalCode);
         this.setCity(city);
         this.setBirthday((LocalDate)birthday);
-        this.setPersonID();
     }
     
     

@@ -7,11 +7,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 import base.PersonDAL;
 import ch.makery.address.MainApp;
 import ch.makery.address.model.Person;
+import domain.PersonDomainModel;
 
 
 public class PersonOverviewController {
@@ -111,7 +113,8 @@ public class PersonOverviewController {
         	
         	//PS6 - Calling the deletePerson method
         	//		Figure out the value of perID
-        	UUID perID = UUID.fromString("1234");
+        	ArrayList<PersonDomainModel> listofPersons = PersonDAL.getPersons();
+        	UUID perID = listofPersons.get(selectedIndex).getPersonID();
         	
         	PersonDAL.deletePerson(perID); 
             personTable.getItems().remove(selectedIndex);
