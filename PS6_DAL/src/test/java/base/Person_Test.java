@@ -16,7 +16,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.StringProperty;
 
-public class Student_Test {
+public class Person_Test {
 	PersonDomainModel testPerson = new PersonDomainModel();
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

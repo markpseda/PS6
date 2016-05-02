@@ -25,9 +25,9 @@ public class PersonDomainModel {
     private  LocalDate birthday;
     private  UUID personID;
 
-    /**
-     * Default constructor.
-     */
+    public PersonDomainModel(){
+    	
+    }
 
 
     public String getFirstName() {
